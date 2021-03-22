@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logo</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="600" height="600" style="border:1px solid black" ></canvas>
+    <script >
+        
+          var cv = document.getElementById('myCanvas');
+          
+            var st = cv.getContext("2d");
+            st.strokeStyle = "red";
+            st.lineWidth = 90;
+            st.beginPath();
+            var x = 290;
+            var y =290;
+            var r=170         //radius
+            var startingAngle = (-Math.PI/2); 
+            var endingAngle = (Math.PI);
+            st.arc(x, y, r, startingAngle, endingAngle, 0);
+            st.stroke();
+            st.moveTo(x-170, y);
+            st.lineTo(x-170, -150);// here we can take any negative value of y coordinate
+            st.stroke();
+     
+            
+          
+        
+      </script>
+</body>
+</html>
